@@ -1,9 +1,10 @@
+import { getCommands } from "./commands.js";
+import { createInterface } from "node:readline";
+import { stdin, stdout } from "node:process";
+
 export function cleanInput(input: string): string[] {
   return input.trim().toLowerCase().split(/\s+/);
 }
-
-import { createInterface } from "node:readline";
-import { stdin, stdout } from "node:process";
 
 export function startREPL() {
   const rl = createInterface({
@@ -12,9 +13,10 @@ export function startREPL() {
     prompt: "> ",
   });
 
-  rl.prompt();
+  const commands = getCommands();
 
-  rl.on("line", (line) => {
+  rl.prompt();
+    rl.on("line", (line) => {
     const words = cleanInput(line);
 
     if (words.length === 0) {
@@ -22,7 +24,21 @@ export function startREPL() {
       return;
     }
 
-    console.log(`Your command was: ${words[0]}`);
+    const commandName = words[0];
+    const command = commands[commandName];
+
+    if (!command) {
+      console.log("Unknown command");
+      rl.prompt();
+      return;
+    }
+
+    try {
+      command.callback(commands);
+    } catch (err) {
+      console.error("Command failed:", err);
+    }
+
     rl.prompt();
   });
 }
