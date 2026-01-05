@@ -1,8 +1,9 @@
 import { startREPL } from "./repl.js";
-import type { CLICommand } from "./command.js";
+import { initState } from "./state.js";
 
 function main() {
-  startREPL();
+  const state = initState();
+  startREPL(state);
 }
 
 main();

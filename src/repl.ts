@@ -1,12 +1,13 @@
-import { getCommands } from "./commands.js";
-import { createInterface } from "node:readline";
-import { stdin, stdout } from "node:process";
+import type { State } from "./state.js";
 
 export function cleanInput(input: string): string[] {
   return input.trim().toLowerCase().split(/\s+/);
 }
 
-export function startREPL() {
+export function startREPL(state: State) {
+  const rl = state.interface;
+  const commands = state.commands;
+
   rl.prompt();
     rl.on("line", (line) => {
     const words = cleanInput(line);
@@ -26,7 +27,7 @@ export function startREPL() {
     }
 
     try {
-      command.callback(commands);
+      command.callback(state);
     } catch (err) {
       console.error("Command failed:", err);
     }

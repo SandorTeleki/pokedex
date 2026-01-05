@@ -11,8 +11,8 @@ export type CLICommand = {
 };
 
 export type State = {
-    interface: Interface;
-    commands: string;
+  interface: Interface;
+  commands: Record<string, CLICommand>;
 }
 
 export function initState(){
@@ -23,4 +23,9 @@ export function initState(){
   });
 
   const commands = getCommands();
+
+  return {
+    interface: rl,
+    commands,
+  }
 }
