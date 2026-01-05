@@ -1,4 +1,4 @@
-import { CLICommand } from "./command.js";
+import { CLICommand } from "./state.js";
 
 export function commandHelp(commands: Record<string, CLICommand>) {
   console.log("Welcome to the Pokedex!");

@@ -7,14 +7,6 @@ export function cleanInput(input: string): string[] {
 }
 
 export function startREPL() {
-  const rl = createInterface({
-    input: stdin,
-    output: stdout,
-    prompt: "> ",
-  });
-
-  const commands = getCommands();
-
   rl.prompt();
     rl.on("line", (line) => {
     const words = cleanInput(line);
