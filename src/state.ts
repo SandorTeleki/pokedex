@@ -3,6 +3,7 @@ import { stdin, stdout } from "node:process";
 
 import { getCommands } from "./commands.js";
 import { PokeAPI } from "./pokeapi.js";
+import type { Pokemon } from "./pokeapi.js";
 
 
 export type CLICommand = {
@@ -17,6 +18,7 @@ export type State = {
   pokeapi: PokeAPI;
   nextLocationsURL: string | null;
   prevLocationsURL: string | null;
+  pokedex: Record<string, Pokemon>;
 }
 
 export function initState(){
@@ -35,5 +37,6 @@ export function initState(){
     pokeapi,
     nextLocationsURL: null,
     prevLocationsURL: null,
+    pokedex: {},
   }
 }
