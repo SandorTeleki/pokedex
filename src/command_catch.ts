@@ -30,6 +30,7 @@ export async function commandCatch(state: State, ...args: string[]): Promise<voi
   if (caught) {
     state.pokedex[normalizedName] = pokemon;
     console.log(`${pokemon.name} was caught!`);
+    console.log("You may now inspect it with the inspect command.");
   } else {
     console.log(`${pokemon.name} escaped!`);
   }
