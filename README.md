@@ -15,14 +15,14 @@ A Pokedex written in TypeScript. Project is based on the course from [Boot.dev](
 ## Pokedex Commands:
 | Command name | Command description |
 | ------------ | ------------------- |
-| "help" | "Displays a help message" |
-| "catch" | "Attempt to catch a Pokemon by name." |
-| "inspect" | "Inspect a caught Pokemon's details." |
-| "explore" | "Explore a location area and list Pokemon found there." |
-| "pokedex" | "List all Pokemon you have caught." |
-| "map" | "Display the names of 20 location areas in the Pokemon world." |
-| "mapb" | "Display the names of the previous 20 location areas in the Pokemon world." |
-| "exit" | "Exits the pokedex." |
+| "help" | Displays a help message. |
+| "catch" | Attempt to catch a Pokemon by name. |
+| "inspect" | Inspect a caught Pokemon's details. |
+| "explore" | Explore a location area and list Pokemon found there. |
+| "pokedex" | List all Pokemon you have caught. |
+| "map" | Display the names of 20 location areas in the Pokemon world. |
+| "mapb" | Display the names of the previous 20 location areas in the Pokemon world. |
+| "exit" | Exits the pokedex. |
 
 ## Possible future improvements:
 - Simulate battles between pokemon

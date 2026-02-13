@@ -12,7 +12,7 @@ export function getCommands(): Record<string, CLICommand> {
   return {
     help: {
       name: "help",
-      description: "Displays a help message",
+      description: "Displays a help message.",
       callback: commandHelp,
     },
     catch: {
