@@ -119,9 +119,23 @@ export type Encounter = {
     method: NamedAPIResource;
 }
 
+export type PokemonStat = {
+  base_stat: number;
+  stat: NamedAPIResource;
+};
+
+export type PokemonTypeSlot = {
+  slot: number;
+  type: NamedAPIResource;
+};
+
 export type Pokemon = {
   id: number;
   name: string;
   base_experience: number | null;
+  height: number;
+  weight: number;
+  stats: PokemonStat[];
+  types: PokemonTypeSlot[];
   [key: string]: unknown;
 }
