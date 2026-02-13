@@ -14,6 +14,7 @@ A Pokedex written in TypeScript. Project is based on the course from [Boot.dev](
 
 ## Pokedex Commands:
 | Command name | Command description |
+| ------------ | ------------------- |
 | "help" | "Displays a help message" |
 | "catch" | "Attempt to catch a Pokemon by name." |
 | "inspect" | "Inspect a caught Pokemon's details." |
