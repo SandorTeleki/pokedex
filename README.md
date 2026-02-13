@@ -1,15 +1,15 @@
 # Pokedex Project from boot.dev
 
-A Pokedex written in TypeScript. Project is based on the course from [Boot.dev](https://www.boot.dev/courses/build-pokedex-cli-typescript).
+A Pokedex written in TypeScript. Project is based on the course from [Boot.dev](https://www.boot.dev/courses/build-pokedex-cli-typescript). Uses [PokeAPI](https://pokeapi.co/) as its API/information source.
 
 ## Set-up:
 1. Clone the repo with `git clone https://github.com/SandorTeleki/pokedex.git`.
 2. Open the folder of the repo and run `npm ci` to install the required dependencies.
 
 ## Repo Commands:
-- `npm run build`: Builds the project. In case you expand the project.
-- `npm run start`: Starts the project. You can use all the pokedex commands.
-- `npm run start`: Start the project in dev mode. You can use all the pokedex commands.
+- `npm run build`: Builds the project.
+- `npm run start`: Starts the project. You can use all the Pokedex commands.
+- `npm run start`: Start the project in dev mode. You can use all the Pokedex commands.
 - `npm run test`: Runs the tests for the project.
 
 ## Pokedex Commands:
